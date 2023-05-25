@@ -53,3 +53,5 @@ const sameFrequency = (num1, num2) => {
 };
 
 console.log(sameFrequency(18, 81));
+
+// github checkkkkkkk
