@@ -31,27 +31,57 @@
 // sameFrequency(3589578, 5879385) // true
 // sameFrequency(22,222) // false
 
-const sameFrequency = (num1, num2) => {
-  const strnum1 = num1.toString();
-  const strnum2 = num2.toString();
-  let freqCount = {};
+// const sameFrequency = (num1, num2) => {
+//   const strnum1 = num1.toString();
+//   const strnum2 = num2.toString();
+//   let freqCount = {};
 
-  if (strnum1.length !== strnum2.length) return false;
+//   if (strnum1.length !== strnum2.length) return false;
 
-  for (let el of strnum1) {
-    freqCount[el] = (freqCount[el] || 0) + 1;
-  }
+//   for (let el of strnum1) {
+//     freqCount[el] = (freqCount[el] || 0) + 1;
+//   }
 
-  for (let el of strnum2) {
-    console.log(freqCount);
-    if (!freqCount[el]) {
-      return false;
-    }
-    freqCount[el]--;
-  }
-  return true;
-};
+//   for (let el of strnum2) {
+//     console.log(freqCount);
+//     if (!freqCount[el]) {
+//       return false;
+//     }
+//     freqCount[el]--;
+//   }
+//   return true;
+// };
 
-console.log(sameFrequency(18, 81));
+// console.log(sameFrequency(18, 81));
 
-// github checkkkkkkk
+// There is a large pile of socks that must be paired by color. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
+
+// Example
+
+// There is one pair of color  and one of color . There are three odd socks left, one of each color. The number of pairs is .
+
+// Function Description
+
+// Complete the sockMerchant function in the editor below.
+
+// sockMerchant has the following parameter(s):
+
+// int n: the number of socks in the pile
+// int ar[n]: the colors of each sock
+// Returns
+
+// int: the number of pairs
+
+// function sockMerchant(n, ar) {
+//   let obj = {};
+//   let pairs = 0;
+//   for (let el of ar) {
+//     obj[el] = (obj[el] || 0) + 1;
+//   }
+//   for (let el in obj) {
+//     pairs += Math.floor(obj[el] / 2);
+//   }
+//   console.log(pairs);
+// }
+
+// sockMerchant(7, [1, 2, 1, 2, 1, 3, 2]);
