@@ -114,3 +114,26 @@
 // };
 
 // console.log(romanToInt("VI"));
+
+// ! valid parentheses
+// var isValid = function (s) {
+//   let mapping = { ")": "(", "}": "{", "]": "[" };
+//   let stack = [];
+//   for (let el of s) {
+//     if (el in mapping) {
+//       if (stack[stack.length - 1] === mapping[el]) {
+//         stack.pop();
+//       } else {
+//         return false;
+//       }
+//     } else {
+//       stack.push(el);
+//       console.log(stack);
+//     }
+//   }
+//   if (stack.length == 0) {
+//     return true;
+//   } else return false;
+// };
+
+// console.log(isValid("({{{{}}}))"));
