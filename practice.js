@@ -85,3 +85,32 @@
 // }
 
 // sockMerchant(7, [1, 2, 1, 2, 1, 3, 2]);
+
+// ! leet code qn no 13. ROMAN TO INTEGER
+
+// var romanToInt = function (s) {
+//   let sum = 0;
+//   let obj = {
+//     I: 1,
+//     V: 5,
+//     X: 10,
+//     L: 50,
+//     C: 100,
+//     D: 500,
+//     M: 1000,
+//   };
+//   let arr = Object.keys(obj);
+//   //   console.log(arr);
+//   for (let el = 0; el < s.length; el++) {
+//     let currentEl = s[el];
+//     let preecedingEl = s[el + 1];
+//     if (arr.indexOf(currentEl) < arr.indexOf(preecedingEl)) {
+//       sum -= obj[currentEl];
+//     } else {
+//       sum += obj[currentEl];
+//     }
+//   }
+//   return sum;
+// };
+
+// console.log(romanToInt("VI"));
