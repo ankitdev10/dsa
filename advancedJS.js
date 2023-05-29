@@ -30,3 +30,31 @@
 // Reassignment:
 // var and let variables can be reassigned with a new value after declaration.
 // const variables, as the name suggests, are constants and cannot be reassigned once they have been assigned a value. However, it's important to note that if a const variable holds a reference to an object, the properties of the object can still be modified.
+
+//  ! CLOSURES
+
+// // It is a combination of functions which allows inner function to access variable of outer function
+
+// const outerFunc = () => {
+//   const name = "ankit";
+
+//   const innerFunction = () => {
+//     console.log(name);
+//   };
+
+//   //   here  the main(outer function returns inner function)
+//   return innerFunction;
+// };
+
+// let val = outerFunc();
+// val();
+// function func1() {
+//   setTimeout(() => {
+//     console.log(x);
+//     console.log(y);
+//   }, 3000);
+
+//   var x = 2;
+//   let y = 12;
+// }
+// func1();
