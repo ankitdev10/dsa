@@ -103,18 +103,18 @@
 
 // ! BUBBLE SORT
 
-const sort = (arr) => {
-  let temp;
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = 0; j < arr.length - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        temp = arr[j + 1];
-        arr[j + 1] = arr[j];
-        arr[j] = temp;
-      }
-    }
-  }
-  return arr;
-};
+// const sort = (arr) => {
+//   let temp;
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = 0; j < arr.length - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         temp = arr[j + 1];
+//         arr[j + 1] = arr[j];
+//         arr[j] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// };
 
-console.log(sort([100, 1, 121, 12, 2, 6, 7, 1]));
+// console.log(sort([100, 1, 121, 12, 2, 6, 7, 1]));
