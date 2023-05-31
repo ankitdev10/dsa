@@ -96,4 +96,14 @@
 
 // console.log(power(2, 10));
 
-//  ? productOfArrayxWrite a function called productOfArray which takes in an array of numbers and returns the product of them all.
+//  ? productOfArray: Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+
+const productOfArray = (arr) => {
+  let i = arr.length;
+  if (i == 0) return 1;
+  return arr[i - 1] * productOfArray(arr.slice(0, i - 1));
+};
+
+console.log(productOfArray([1, 2, 3]));
+
+console.log([1, 4, 5]);
