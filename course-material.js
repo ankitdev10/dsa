@@ -1,3 +1,20 @@
+// ! MULTIPLE POITERS PATTERN
+
+// ? WRITE A FUNCTION CALLED sumZero which accepts a sorted array of integres. THe functiona shlould find the first two pairs wwhose sum is the given 'goal'
+
+// const sumZero = (arr, goal) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
+//     let complement = Math.abs(num - goal);
+//     console.log(complement);
+//     if (arr.indexOf(complement) !== -1) {
+//       return [num, complement];
+//     }
+//     return false;
+//   }
+// };
+
+// console.log(sumZero([1, 2, 3, 4, 5], 6));
 // ! GIVEN TWO ARRAYS, CHECK IF ARR2 CONTAINS SQUARED ELEMENTS FROM ARRAY 1
 
 //? NAIVE SOLUTION
@@ -18,6 +35,7 @@
 // console.log(same([1, 1, 2, 3], [1, 1, 9, 4]));
 
 // ! Frequency Counter - sameFrequency
+
 // Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
 
 // Your solution MUST have the following complexities:
@@ -67,3 +85,15 @@
 // }
 
 // countDown(5);
+
+// ? Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic the functionality of Math.pow()  - do not worry about negative bases and exponents.
+
+// function power(base, exponential) {
+//   if (exponential == 0) return 1;
+
+//   return base * power(base, exponential - 1);
+// }
+
+// console.log(power(2, 10));
+
+//  ? productOfArrayxWrite a function called productOfArray which takes in an array of numbers and returns the product of them all.
