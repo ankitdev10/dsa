@@ -98,12 +98,23 @@
 
 //  ? productOfArray: Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
 
-const productOfArray = (arr) => {
-  let i = arr.length;
-  if (i == 0) return 1;
-  return arr[i - 1] * productOfArray(arr.slice(0, i - 1));
-};
+// const productOfArray = (arr) => {
+//   let i = arr.length;
+//   if (i == 0) return 1;
+//   return arr[i - 1] * productOfArray(arr.slice(0, i - 1));
+// };
 
-console.log(productOfArray([1, 2, 3]));
+// console.log(productOfArray([1, 2, 3]));
 
-console.log([1, 4, 5]);
+// console.log([1, 4, 5]);
+
+// ! Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+
+// const reverse = (str) => {
+//   if (str.length == 0) {
+//     return str;
+//   }
+//   return str[str.length - 1] + reverse(str.slice(0, str.length - 1));
+// };
+
+// console.log(reverse("cat"));
