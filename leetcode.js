@@ -143,21 +143,34 @@
 // console.log(sort([100, 1, 121, 12, 2, 6, 7, 1]));
 
 //  ! 14. Longest Common Prefix
-var longestCommonPrefix = function (strs) {
-  let prefix = strs[0];
-  for (let i = 1; i < strs.length; i++) {
-    while (strs[i].indexOf(prefix) !== 0) {
-      console.log({ i: strs[i].indexOf(prefix), prefix });
-      prefix = prefix.slice(0, prefix.length - 1);
-      console.log({ prefix });
-      console.log(strs[i].indexOf(prefix));
-      if (prefix == "") {
-        return "";
-      }
-    }
-  }
-  let endTime = new Date().getTime();
-  return prefix;
-};
+// var longestCommonPrefix = function (strs) {
+//   let prefix = strs[0];
+//   for (let i = 1; i < strs.length; i++) {
+//     while (strs[i].indexOf(prefix) !== 0) {
+//       console.log({ i: strs[i].indexOf(prefix), prefix });
+//       prefix = prefix.slice(0, prefix.length - 1);
+//       console.log({ prefix });
+//       console.log(strs[i].indexOf(prefix));
+//       if (prefix == "") {
+//         return "";
+//       }
+//     }
+//   }
+//   let endTime = new Date().getTime();
+//   return prefix;
+// };
 
-console.log(longestCommonPrefix(["flower", "flow", "flArida"]));
+// console.log(longestCommonPrefix(["flower", "flow", "flArida"]));
+
+// ! 976. Largest Perimeter Triangle
+
+// var largestPerimeter = function(arr) {
+//   //  sort the array in descending order.
+//  const sort = arr.sort((a,b) => b - a)
+//   for(let i = 0; i < sort.length; i++){
+//       if(arr[i] < arr[i +1] + arr[i + 2])
+//       return arr[i] + arr[i+1] + arr[i + 2]
+//   }
+//   return 0
+
+// };
