@@ -32,31 +32,31 @@
 
 // ! leet code qn no 13. ROMAN TO INTEGER
 
-var romanToInt = function (s) {
-  let sum = 0;
-  let obj = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
-  let arr = Object.keys(obj);
-  for (let el = 0; el < s.length; el++) {
-    let currentEl = s[el];
-    let preecedingEl = s[el + 1];
-    if (arr.indexOf(currentEl) < arr.indexOf(preecedingEl)) {
-      sum -= obj[currentEl];
-    } else {
-      sum += obj[currentEl];
-    }
-  }
-  return sum;
-};
+// var romanToInt = function (s) {
+//   let sum = 0;
+//   let obj = {
+//     I: 1,
+//     V: 5,
+//     X: 10,
+//     L: 50,
+//     C: 100,
+//     D: 500,
+//     M: 1000,
+//   };
+//   let arr = Object.keys(obj);
+//   for (let el = 0; el < s.length; el++) {
+//     let currentEl = s[el];
+//     let preecedingEl = s[el + 1];
+//     if (arr.indexOf(currentEl) < arr.indexOf(preecedingEl)) {
+//       sum -= obj[currentEl];
+//     } else {
+//       sum += obj[currentEl];
+//     }
+//   }
+//   return sum;
+// };
 
-console.log(romanToInt("VI"));
+// console.log(romanToInt("VI"));
 
 //! LEET CODE valid parentheses
 // var isValid = function (s) {
@@ -102,27 +102,27 @@ console.log(romanToInt("VI"));
 
 // ! 347. Top K Frequent Elements
 
-var topKFrequent = function (nums, k) {
-  var count = {};
+// var topKFrequent = function (nums, k) {
+//   var count = {};
 
-  nums.forEach((num) => {
-    if (count[num]) {
-      count[num] += 1;
-    } else {
-      count[num] = 1;
-    }
-  });
+//   nums.forEach((num) => {
+//     if (count[num]) {
+//       count[num] += 1;
+//     } else {
+//       count[num] = 1;
+//     }
+//   });
 
-  let array = Object.entries(count).sort((a, b) => {
-    return b[1] - a[1];
-  });
-  console.log(array);
-  let tests = [];
-  for (let i = 0; i < k; i++) {
-    tests.push(array[i][0]);
-  }
-  return tests;
-};
+//   let array = Object.entries(count).sort((a, b) => {
+//     return b[1] - a[1];
+//   });
+//   console.log(array);
+//   let tests = [];
+//   for (let i = 0; i < k; i++) {
+//     tests.push(array[i][0]);
+//   }
+//   return tests;
+// };
 
 // ! BUBBLE SORT
 
@@ -141,3 +141,24 @@ var topKFrequent = function (nums, k) {
 // };
 
 // console.log(sort([100, 1, 121, 12, 2, 6, 7, 1]));
+
+//  ! 14. Longest Common Prefix
+
+var longestCommonPrefix = function (strs) {
+  let prefix = strs[0];
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      console.log({ i: strs[i].indexOf(prefix), prefix });
+      prefix = prefix.slice(0, prefix.length - 1);
+      console.log({ prefix });
+      console.log(strs[i].indexOf(prefix));
+      if (prefix == "") {
+        return "";
+      }
+    }
+  }
+  let endTime = new Date().getTime();
+  return prefix;
+};
+
+console.log(longestCommonPrefix(["flower", "flow", "flArida"]));
