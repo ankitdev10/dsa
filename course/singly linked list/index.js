@@ -84,6 +84,21 @@ class SinglyLinkedList {
 
     this.length++;
   }
+
+  insertAtLast(val) {
+    let newNode = new Node(val);
+    //  yedi head xaina bhani list empty xa tei bhayera aaba halne node nai last ma janxa
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      let lastNode = this.tail;
+      // aaba last ma node halna aile ko last node chaiyo ani tesko next ma new node point garne
+      lastNode.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+  }
 }
 
 module.exports = SinglyLinkedList;
