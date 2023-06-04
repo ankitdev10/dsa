@@ -201,7 +201,7 @@
 
 // console.log(canBeIncreasing([105, 924, 32, 968]));
 // console.log(canBeIncreasing([1, 2, 10, 5, 7]));
-console.log(canBeIncreasing([13, 205, 553, 527, 790, 238]));
+// console.log(canBeIncreasing([13, 205, 553, 527, 790, 238]));
 
 //  ! 26. Remove Duplicates from Sorted Array
 
@@ -229,12 +229,14 @@ console.log(canBeIncreasing([13, 205, 553, 527, 790, 238]));
 
 // ! 27. Remove Element
 
-var removeElement = function (nums, val) {
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === val) {
-      nums.splice(i, 1);
-      i--;
-    }
-  }
-  return nums.length;
-};
+// var removeElement = function (nums, val) {
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === val) {
+//       nums.splice(i, 1);
+//       i--;
+//     }
+//   }
+//   return nums.length;
+// };
+
+//  ! 28. Find the Index of the First Occurrence in a String
