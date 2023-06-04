@@ -29,7 +29,7 @@ class SinglyLinkedList {
     let current = this.head;
     //  suru ma euta head xaaa
 
-    //  aaba head bhaneko node ho, taba samma traverse garne jaba samma head.next le null didaina. null dinu ko matlab last element ma pugyo
+    //  aaba current bhaneko node ho, taba samma traverse garne jaba samma head.next le null didaina. null dinu ko matlab last element ma pugyo
     while (current) {
       console.log(current.val);
       current = current.next;
