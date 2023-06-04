@@ -54,3 +54,17 @@
 
 //   return isPal(str.slice(1, str.length - 1));
 // };
+
+const linearSearchHelper = function (arr, key, index) {
+  if (key === arr[index]) return index;
+
+  if (index === arr.length - 1) return -1;
+
+  return linearSearchHelper(arr, key, (index = index + 1));
+};
+
+const linearSearch = (arr, key) => {
+  return linearSearchHelper(arr, key, 0);
+};
+
+console.log(linearSearch([1, 2, 3, 5, 6, 7], 7));
