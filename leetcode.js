@@ -205,24 +205,36 @@ console.log(canBeIncreasing([13, 205, 553, 527, 790, 238]));
 
 //  ! 26. Remove Duplicates from Sorted Array
 
-var removeDuplicates = function (nums) {
-  //  ? Solution 1
-  // let obj = {};
-  // for (let el of nums) {
-  //   obj[el] = (obj[el] || 0) + 1;
-  // }
-  // // console.log(Object.keys(obj));
-  // return Object.keys(obj).map((el) => parseInt(el));
+// var removeDuplicates = function (nums) {
+//   //  ? Solution 1
+//   // let obj = {};
+//   // for (let el of nums) {
+//   //   obj[el] = (obj[el] || 0) + 1;
+//   // }
+//   // // console.log(Object.keys(obj));
+//   // return Object.keys(obj).map((el) => parseInt(el));
 
-  // ? Solution 2
+//   // ? Solution 2
 
-  for (let i = 0; i < nums.length - 1; i++) {
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i + 1, 1);
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i] === nums[i + 1]) {
+//       nums.splice(i + 1, 1);
+//       i--;
+//     }
+//   }
+//   return nums.length;
+// };
+
+// console.log(removeDuplicates([1, 1, 2]));
+
+// ! 27. Remove Element
+
+var removeElement = function (nums, val) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
       i--;
     }
   }
   return nums.length;
 };
-
-console.log(removeDuplicates([1, 1, 2]));
