@@ -174,3 +174,55 @@
 //   return 0
 
 // };
+
+// ! 1909. Remove One Element to Make the Array Strictly Increasing
+// var canBeIncreasing = function (nums) {
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i + 1] - nums[i] <= 0) {
+//       // nums.splice(i, 1);
+//       if (nums[i] >= nums[i + 2]) {
+//         nums.splice(i, 1);
+//         break;
+//       } else {
+//         nums.splice(i + 1, 1);
+//         break;
+//       }
+//     }
+//   }
+
+//   console.log(nums);
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i + 1] - nums[i] <= 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(canBeIncreasing([105, 924, 32, 968]));
+// console.log(canBeIncreasing([1, 2, 10, 5, 7]));
+console.log(canBeIncreasing([13, 205, 553, 527, 790, 238]));
+
+//  ! 26. Remove Duplicates from Sorted Array
+
+var removeDuplicates = function (nums) {
+  //  ? Solution 1
+  // let obj = {};
+  // for (let el of nums) {
+  //   obj[el] = (obj[el] || 0) + 1;
+  // }
+  // // console.log(Object.keys(obj));
+  // return Object.keys(obj).map((el) => parseInt(el));
+
+  // ? Solution 2
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i + 1, 1);
+      i--;
+    }
+  }
+  return nums.length;
+};
+
+console.log(removeDuplicates([1, 1, 2]));
