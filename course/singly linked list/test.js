@@ -1,8 +1,13 @@
 const SinglyLinkedList = require("./index");
 
 const list = new SinglyLinkedList();
-// list.push("hello");
-list.push("hiiii");
+list.push(1);
+list.push(2);
+list.push(3);
 
-list.insertAtFirst("first");
+console.log(list);
+
+list.shift();
+
+console.log("after shiftinh");
 console.log(list);

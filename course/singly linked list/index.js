@@ -36,6 +36,7 @@ class SinglyLinkedList {
     }
   }
 
+  //  REMOVE FROM LAST
   pop() {
     if (!this.head) return "Empty list";
     // pop bhanesi last ko hatxa, so gotta track last node(using current) and also the second last node(newTaill), kinaki aaba tail bhaneko ta second last node hunxa
@@ -47,6 +48,21 @@ class SinglyLinkedList {
     }
     this.tail = newTail;
     this.tail.next = null;
+  }
+
+  // remove from beginning
+  shift() {
+    if (!this.head) {
+      return "cant remove cause link empty";
+    } else {
+      //  aba head remove hanne bhanepaxi head bhanda paxi aaune naya head hunxa tei bhaera tyo node chaiyo
+      let newHead = this.head.next;
+
+      //  aaba head ko next lai null pardim kinaki aaba ko head is not our head
+      this.head = null;
+      this.head = newHead;
+    }
+    this.length--;
   }
 
   insertAtFirst(val) {
@@ -62,7 +78,6 @@ class SinglyLinkedList {
     } else {
       // aaba chai naya head bhaneko bhakar banako nodeee
       this.head = newNode;
-
       //  aaba head bhaneko maile bhakar banako node bhaisakyo, aaba naya head ko next le chai yo bhanda aagadi ko node llai point garxa
       this.head.next = firstNode;
     }
