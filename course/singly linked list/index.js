@@ -93,7 +93,7 @@ class SinglyLinkedList {
       this.tail = newNode;
     } else {
       let lastNode = this.tail;
-      // aaba last ma node halna aile ko last node chaiyo ani tesko next ma new node point garne
+      // aaba last ma node halna aile ko last node chaiyo ani tesko next ma new node point garneeee
       lastNode.next = newNode;
       this.tail = newNode;
     }
