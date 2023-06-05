@@ -31,7 +31,7 @@ class SinglyLinkedList {
 
     //  aaba current bhaneko node ho, taba samma traverse garne jaba samma head.next le null didaina. null dinu ko matlab last element ma pugyo
     while (current) {
-      console.log(current.val);
+      process.stdout.write(current.val + "->");
       current = current.next;
     }
   }
@@ -98,6 +98,23 @@ class SinglyLinkedList {
       this.tail = newNode;
     }
     this.length++;
+  }
+  getNodeAtIndex(index) {
+    if (index < 0) return "Ha! the index must be 0 or greater than 0";
+    if (index > this.length) return "There are not that many nodes in the list";
+    else {
+      // euta traverse garna variable chaiyo
+      let current = this.head;
+      let i = 0;
+      // index meet garna while loop, ani current chai subsequent node hudai janxa
+      while (i != index) {
+        console.log("looppp");
+        current = current.next;
+        console.log(current);
+        i++;
+      }
+      return current;
+    }
   }
 }
 
