@@ -10,7 +10,7 @@ public class Main {
         linkedList.push(4);
         linkedList.push(5);
         linkedList.push(6);
-        linkedList.push(7);
+        linkedList.shift(7);
 
         linkedList.printItems();
 

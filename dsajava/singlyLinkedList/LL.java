@@ -16,6 +16,7 @@ public class LL {
         }
     }
 
+    // insert at last
     void push(int data) {
         Node newNode = new Node(data);
 
@@ -29,6 +30,39 @@ public class LL {
             tail.next = newNode;
             tail = newNode;
         }
+    }
+
+    // insert at first
+    void shift(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        }
+
+        else {
+            newNode.next = head;
+            head = newNode;
+        }
+        this.length += 1;
+    }
+
+    // remove last node
+
+    void pop() {
+        if (length == 0) {
+            System.out.println("Can not pop, list is empty");
+        } else {
+            // aaba last node delete garna second last node samma pugam ani second last ko
+            // next lai null gardim
+            Node currNode = head;
+
+            while (currNode.next != null) {
+                currNode = currNode.next;
+            }
+        }
+        length -= 1;
     }
 
     void printItems() {
