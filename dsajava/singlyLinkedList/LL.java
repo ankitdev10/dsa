@@ -30,6 +30,7 @@ public class LL {
             tail.next = newNode;
             tail = newNode;
         }
+        this.length += 1;
     }
 
     // insert at first
@@ -51,16 +52,26 @@ public class LL {
     // remove last node
 
     void pop() {
-        if (length == 0) {
+        if (this.length == 0) {
             System.out.println("Can not pop, list is empty");
+        }
+        // yedi euta matra node xa bhani
+        else if (head.next == null) {
+            head = null;
+            tail = null;
         } else {
             // aaba last node delete garna second last node samma pugam ani second last ko
             // next lai null gardim
             Node currNode = head;
 
-            while (currNode.next != null) {
+            while (currNode.next.next != null) {
                 currNode = currNode.next;
             }
+            // while loop sakida aaba currNode le second last node point garxa, last nodee
+            // nikalne bhanesi aaba ko last node yei node hunxa so that shoud be the tail
+            // ani tesko next null hunxa
+            currNode.next = null;
+            tail = currNode;
         }
         length -= 1;
     }
@@ -68,12 +79,17 @@ public class LL {
     void printItems() {
         // print garna paila head bata suru ani hudai janxa, tei bhara euta variable
         // chaiyo of data type Node itself which will traerse through the nodes
+
+        if (length == 0) {
+            System.out.println("The list is empty");
+        }
         Node currNode = head;
 
         while (currNode != null) {
-            System.out.println(currNode.data);
+            System.out.println(currNode.data + "->");
             currNode = currNode.next;
         }
+        System.out.println("Null");
 
     }
 }
