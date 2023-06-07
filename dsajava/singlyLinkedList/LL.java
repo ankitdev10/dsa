@@ -90,6 +90,39 @@ public class LL {
         length -= 1;
     }
 
+    // get node at a particular index
+
+    void getNode(int i) {
+        int currentIndex = 0;
+        Node currNode = head;
+        while (currentIndex != i) {
+            currNode = currNode.next;
+            currentIndex += 1;
+        }
+        System.out.println("The data at index " + i + " is " + currNode.data);
+    }
+
+    // imsert at a index
+
+    void insertAtIndex(int data, int i) {
+        Node newNode = new Node(data);
+        int currIndex = 0;
+        Node currNode = head;
+
+        while (currIndex < i - 1) {
+            // yedi index number 2 ma halne ho bhani aaba yo loop le previous index ko node
+            // lai currNode banauxa
+            currNode = currNode.next;
+            currIndex += 1;
+        }
+        // aaba newNode chai aile ko node bhanda paxadi aauxa. paila suru nayanode le
+        // aile ko node ko next point garxa
+        newNode.next = currNode.next;
+        // ani aile ko node ko next le aaba newnode lai point garxwa
+        currNode.next = newNode;
+
+    }
+
     void printItems() {
         // print garna paila head bata suru ani hudai janxa, tei bhara euta variable
         // chaiyo of data type Node itself which will traerse through the nodes

@@ -6,11 +6,12 @@ public class Main {
 
         linkedList.push(1);
         linkedList.push(2);
-        linkedList.push(3);
+        // linkedList.push(3);
         linkedList.push(4);
         linkedList.push(5);
-        linkedList.push(6);
-        linkedList.unshift();
+        // linkedList.push(6);
+
+        linkedList.insertAtIndex(3, 2);
         linkedList.printItems();
     }
 }
