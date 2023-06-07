@@ -104,6 +104,5 @@ public class LL {
             currNode = currNode.next;
         }
         System.out.println("Null");
-
     }
 }
