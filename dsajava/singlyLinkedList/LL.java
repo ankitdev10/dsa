@@ -81,9 +81,13 @@ public class LL {
     void unshift() {
         if (length == 0) {
             System.out.println("Can not remove node from an empty list");
+        } else {
+
+            Node crrHead = head;
+            head = crrHead.next;
         }
-        Node crrHead = head;
-        head = crrHead.next;
+
+        length -= 1;
     }
 
     void printItems() {
