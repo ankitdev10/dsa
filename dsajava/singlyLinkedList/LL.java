@@ -76,6 +76,16 @@ public class LL {
         length -= 1;
     }
 
+    // remove from first;
+
+    void unshift() {
+        if (length == 0) {
+            System.out.println("Can not remove node from an empty list");
+        }
+        Node crrHead = head;
+        head = crrHead.next;
+    }
+
     void printItems() {
         // print garna paila head bata suru ani hudai janxa, tei bhara euta variable
         // chaiyo of data type Node itself which will traerse through the nodes
