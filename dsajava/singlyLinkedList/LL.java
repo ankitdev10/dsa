@@ -120,6 +120,7 @@ public class LL {
         newNode.next = currNode.next;
         // ani aile ko node ko next le aaba newnode lai point garxwa
         currNode.next = newNode;
+        length += 1;
 
     }
 
