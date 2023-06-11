@@ -23,7 +23,7 @@ public class Leetcode {
     // }
     // return letters[start % letters.length];
     // }
-
+    // ! 34
     static int check(int[] nums, int target, boolean findStartIndex) {
         int start = 0;
         int end = nums.length - 1;
