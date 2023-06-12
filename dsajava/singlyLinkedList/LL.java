@@ -121,7 +121,35 @@ public class LL {
         // ani aile ko node ko next le aaba newnode lai point garxwa
         currNode.next = newNode;
         length += 1;
+    }
 
+    static LL merge(LL l1, LL l2) {
+        Node h1 = l1.head;
+        Node h2 = l2.head;
+        LL ans = new LL();
+        while (h1 != null && h2 != null) {
+
+            if (h1.data < h2.data) {
+                ans.push(h1.data);
+                h1 = h1.next;
+            } else {
+                ans.push(h2.data);
+                h2 = h2.next;
+            }
+
+        }
+
+        while (h1 != null) {
+            ans.push(h1.data);
+            h1 = h1.next;
+        }
+
+        while (h2 != null) {
+            ans.push(h2.data);
+            h2 = h2.next;
+        }
+
+        return ans;
     }
 
     void printItems() {
@@ -134,6 +162,7 @@ public class LL {
         Node currNode = head;
 
         while (currNode != null) {
+
             System.out.println(currNode.data + "->");
             currNode = currNode.next;
         }
