@@ -60,26 +60,44 @@ public class Funcs {
     // ? USING BINARY SEARCH
 
     public int peakIndexInMountainArray(int[] arr) {
+
         int start = 0;
         int end = arr.length - 1;
-        int ans = 0;
-        while (start <= end) {
+
+        while (start < end) {
             int mid = (start + end) / 2;
 
             if (arr[mid] > arr[mid + 1]) {
-                // if its true it means we are now in increasing order. so now start is mid;
-
-                if (arr[mid] > arr[mid - 1]) {
-                    ans = arr[mid];
-                    return ans;
-                } else {
-                    end = mid - 1;
-                }
+                // you are in decreasing part of the array
+                // mid could be possible answer but look at left beacaus left could be greater
+                // than mid
+                end = mid;
             } else {
                 start = mid + 1;
             }
         }
-        return ans;
+        return start;
+        // int start = 0;
+        // int end = arr.length - 1;
+        // int ans = 0;
+        // while (start <= end) {
+        // int mid = (start + end) / 2;
+
+        // if (arr[mid] > arr[mid + 1]) {
+        // // if its true it means we are now in increasing order. so now start is mid;
+
+        // if (arr[mid] > arr[mid - 1]) {
+        // ans = arr[mid];
+        // return ans;
+        // } else {
+        // end = mid - 1;
+        // }
+        // } else {
+        // start = mid + 1;
+        // }
+        // }
+        // return ans;
+        // }
     }
 
 }
