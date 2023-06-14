@@ -69,7 +69,7 @@ public class Funcs {
 
             if (arr[mid] > arr[mid + 1]) {
                 // you are in decreasing part of the array
-                // mid could be possible answer but look at left beacaus left could be greater
+                // mid could be possible answer but look at left because left could be greater
                 // than mid
                 end = mid;
             } else {
