@@ -1,4 +1,4 @@
-package dsajava.leetcodejava;
+package dsajava.leetcodejava.binarysearch;
 
 public class Leetcode {
     public static void main(String[] args) {

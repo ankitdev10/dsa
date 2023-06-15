@@ -1,4 +1,4 @@
-package dsajava.leetcodejava;
+package dsajava.leetcodejava.binarysearch;
 
 public class Funcs {
     // ! leet code 744
