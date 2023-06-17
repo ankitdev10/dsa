@@ -1,4 +1,4 @@
-package dsajava.DSA.doubly;
+package dsajava.Datastructres.doubly;
 
 public class Main {
     public static void main(String[] args) {

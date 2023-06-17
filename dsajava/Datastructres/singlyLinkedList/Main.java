@@ -1,9 +1,8 @@
-package dsajava.DSA.singlyLinkedList;
+package dsajava.Datastructres.singlyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
         LL L1 = new LL();
-        LL l2 = new LL();
 
         L1.push(1);
         L1.push(3);
@@ -11,13 +10,7 @@ public class Main {
         L1.push(7);
         L1.push(9);
 
-        l2.push(2);
-        l2.push(4);
-        l2.push(6);
-        l2.push(8);
-        l2.push(10);
-
-        LL ans = LL.merge(L1, l2);
+        LL ans = LL.reverse(L1);
 
         ans.printItems();
 

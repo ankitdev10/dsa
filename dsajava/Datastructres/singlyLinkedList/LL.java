@@ -1,4 +1,4 @@
-package dsajava.DSA.singlyLinkedList;
+package dsajava.Datastructres.singlyLinkedList;
 
 public class LL {
     Node head;
@@ -145,11 +145,27 @@ public class LL {
         }
 
         while (h2 != null) {
-            ans.push(h2.data);
+            ans.shift(h2.data);
             h2 = h2.next;
         }
 
         return ans;
+    }
+
+    static LL reverse(LL linkedList) {
+        Node head = linkedList.head;
+        Node current = head;
+
+        LL result = new LL();
+
+        // simply loop through the nodes and add nodes to the beginning of the list,
+        // your list is reversed
+        while (current != null) {
+            result.shift(current.data);
+            current = current.next;
+        }
+
+        return result;
     }
 
     void printItems() {
