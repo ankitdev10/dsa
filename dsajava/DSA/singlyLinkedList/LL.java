@@ -1,4 +1,4 @@
-package dsajava.singlyLinkedList;
+package dsajava.DSA.singlyLinkedList;
 
 public class LL {
     Node head;

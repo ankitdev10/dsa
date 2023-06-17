@@ -1,4 +1,4 @@
-package dsajava.doubly;
+package dsajava.DSA.doubly;
 
 public class DL {
     Node head;

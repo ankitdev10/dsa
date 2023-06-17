@@ -1,4 +1,4 @@
-package dsajava.binarySearch;
+package dsajava.algos.binarySearch;
 
 public class Ceiling {
     public static void main(String[] args) {
