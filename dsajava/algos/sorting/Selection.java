@@ -10,13 +10,10 @@ public class Selection {
     }
 
     static public void selectionSort(int[] arr) {
-
         for (int i = 0; i < arr.length; i++) {
             int lastIndex = arr.length - i - 1;
-
             for (int j = 0; j < lastIndex; i++) {
                 if (arr[j] > arr[lastIndex]) {
-
                 }
             }
         }
