@@ -47,4 +47,15 @@ public class Funcs {
 
         return num % 10 + printSum(num / 10);
     }
+
+    // ! reverse a string
+    String reverseString(String str) {
+        int length = str.length();
+        if (length == 0)
+            return str;
+        return (str.charAt(length - 1)) + reverseString(str.substring(0, length - 1));
+    }
+
+    // ! palindrom
+
 }
