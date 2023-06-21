@@ -8,7 +8,11 @@ public class Recursion {
         // func.printNatural(5);
         // System.out.println(func.printSum(1234));
 
-        System.out.println(func.reverseString("ankit"));
+        // System.out.println(func.reverseString("ankit"));
+        int[] nums = { 1, 2, 5, 9, 10 };
+        // System.out.println(func.checkSorted(nums, 0));
+
+        System.out.println(func.ls(nums, 0, 9));
 
     }
 }

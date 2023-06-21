@@ -56,6 +56,27 @@ public class Funcs {
         return (str.charAt(length - 1)) + reverseString(str.substring(0, length - 1));
     }
 
-    // ! palindrom
+    // ? ARRAY PROBLEMS
 
+    // ! check if array is sorted or not
+    boolean checkSorted(int[] arr, int index) {
+
+        if (index == arr.length - 1)
+            return true; // we checked upto last that means the array is sorted
+
+        return arr[index] < arr[index + 1] && checkSorted(arr, index + 1);
+    }
+    // ! linear search using recursion
+
+    int ls(int[] arr, int index, int target) {
+
+        if (index == arr.length - 1)
+            return -1;
+        if (arr[index] == target)
+            return index;
+
+        return ls(arr, index + 1, target);
+
+        // return -1;
+    }
 }
