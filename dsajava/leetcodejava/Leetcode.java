@@ -1,10 +1,7 @@
 package dsajava.leetcodejava;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Leetcode {
     public static void main(String[] args) {
@@ -100,6 +97,31 @@ public class Leetcode {
     // r[k] = result.get(k);
     // }
     // return r;
+    // }
+
+    // ! 234. Palindrome Linked List
+    // public boolean isPalindrome(ListNode head) {
+    // ListNode curr = head;
+    // List<Integer> res = new ArrayList<Integer>();
+    // // sabai vals lai list ma haldim
+    // while(curr != null){
+    // res.add(curr.val);
+    // curr = curr.next;
+    // }
+
+    // // two pointers to check palindrome
+    // int i = 0;
+    // int j = res.size() - 1;
+
+    // while(i < j){
+    // if(res.get(i) != res.get(j)){
+    // return false;
+    // } else{
+    // i++;
+    // j--;
+    // }
+    // }
+    // return true;
     // }
 
 }
