@@ -1,5 +1,11 @@
 package dsajava.leetcodejava;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Leetcode {
     public static void main(String[] args) {
     }
@@ -23,7 +29,7 @@ public class Leetcode {
     // }
 
     // }
-    // ! 189
+    // ! 189 (rotate array)
     // public void rotate(int[] nums, int k) {
     // // we will reverse the entire array first
     // // then reverse the first k elements
@@ -44,4 +50,56 @@ public class Leetcode {
     // endIndex--;
     // }
     // }
+
+    // ! 387 (First unique charecter )
+    // public int firstUniqChar(String s) {
+    // Map<Character, Integer> map = new LinkedHashMap<>();
+
+    // for(int i = 0; i < s.length(); i++){
+    // char c = s.charAt(i);
+
+    // if(map.containsKey(c)){
+    // map.replace(c, map.get(c) + 1);
+    // }
+    // else {
+    // map.put(c , 1);
+    // }
+
+    // }
+
+    // for(Map.Entry<Character, Integer> entry: map.entrySet()) {
+    // if(entry.getValue() == 1) {
+
+    // return s.indexOf(entry.getKey());
+    // }
+    // }
+    // return -1;
+    // }
+
+    // ! 350. Intersection of Two Arrays II
+    // public int[] intersect(int[] nums1, int[] nums2) {
+    // List<Integer> result = new ArrayList<Integer>();
+    // Arrays.sort(nums1);
+    // Arrays.sort(nums2);
+    // int i = 0, j = 0;
+
+    // while(i < nums1.length && j < nums2.length){
+    // if(nums1[i] < nums2[j]){
+    // i++;
+    // } else if(nums1[i] > nums2[j]){
+    // j++;
+    // }else{
+    // result.add(nums1[i]);
+    // i++;
+    // j++;
+    // }
+    // }
+    // // converting List to array of integers
+    // int[] r = new int[result.size()];
+    // for (int k = 0; k < result.size(); k++) {
+    // r[k] = result.get(k);
+    // }
+    // return r;
+    // }
+
 }
