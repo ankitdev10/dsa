@@ -168,6 +168,11 @@ public class LL {
         return result;
     }
 
+    static void reverse(Node head) {
+
+        return;
+    }
+
     void printItems() {
         // print garna paila head bata suru ani hudai janxa, tei bhara euta variable
         // chaiyo of data type Node itself which will traerse through the nodes
