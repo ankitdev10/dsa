@@ -124,4 +124,47 @@ public class Leetcode {
     // return true;
     // }
 
+    // ! 141. Linked List Cycle
+    // public boolean hasCycle(ListNode head) {
+    // // fast and slow pointer method
+    // ListNode fast = head, slow = head;
+
+    // while(fast != null && fast.next != null){
+    // fast = fast.next.next;
+    // slow = slow.next;
+    // if(fast == slow) {
+    // return true;
+    // }
+    // }
+    // return false;
+    // }
+
+    // ! 142. Linked List Cycle II
+    // public ListNode detectCycle(ListNode head) {
+    // // fast and slow pointers
+    // // find cycle first
+
+    // ListNode fast = head, slow = head;
+
+    // while (fast != null && fast.next != null) {
+    // fast = fast.next.next;
+    // slow = slow.next;
+
+    // if (fast == slow) {
+    // // now we have found circle
+    // // now change one of the pointers to head and traverse one by one
+    // // when they meet that is the index where pointer begins
+    // fast = head;
+
+    // while (fast != slow) {
+    // fast = fast.next;
+    // slow = slow.next;
+    // }
+    // return fast;
+
+    // }
+    // }
+    // return null;
+    // }
+
 }
