@@ -196,4 +196,22 @@ public class Leetcode {
     // }
     // return ans;
     // }
+
+    // ! 876 middle of linked list
+    // public ListNode middleNode(ListNode head) {
+    // // slow and fast pointers
+
+    // // imagine a race going on
+    // // the speed of one person is twice the other
+    // // so when the faster person reaches the end the slower person will be at
+    // middle(since fast person is 2x faster)
+
+    // ListNode fast = head, slow = head;
+
+    // while(fast != null && fast.next != null){
+    // fast = fast.next.next;
+    // slow = slow.next;
+    // }
+    // return slow;
+    // }
 }
