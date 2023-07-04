@@ -167,4 +167,33 @@ public class Leetcode {
     // return null;
     // }
 
+    // !202. Happy Number
+
+    // public boolean isHappy(int n) {
+    // // fast and slow pointers
+    // int slow = n;
+    // int fast = n;
+
+    // do{
+    // slow = findSq(slow);
+    // fast = findSq(findSq(fast));
+    // } while( slow != fast);
+
+    // if(slow == 1){
+    // return true;
+    // } else {
+    // return false;
+    // }
+    // }
+
+    // static int findSq(int n){
+
+    // int ans = 0;
+    // while(n > 0){
+    // int remainder = n % 10;
+    // ans+= remainder * remainder;
+    // n /= 10;
+    // }
+    // return ans;
+    // }
 }
