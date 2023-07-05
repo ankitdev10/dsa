@@ -1,25 +1,51 @@
 package dsajava.revision;
 
+import java.util.Arrays;
+
 public class Revision {
     public static void main(String[] args) {
-        int[] nums = { 5, 6, 7, 8, 9, 1, 2, 3 };
-        System.out.println(findPeakInMountainArray(nums));
+        int[] nums = { 8, 7, 6, 5, 4, 0, };
+        System.out.println(Arrays.toString(mergeSort(nums)));
+
     }
 
-    static int findPeakInMountainArray(int[] arr) {
+    static int[] mergeSort(int[] arr) {
+        if (arr.length == 1)
+            return arr;
 
-        int start = 0;
-        int end = arr.length - 1;
+        int mid = arr.length / 2;
+        int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
+        int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
+        System.out.println(Arrays.toString(left));
+        return merge(left, right);
+    }
 
-        while (start < end) {
-            int mid = (start + end) / 2;
+    static int[] merge(int[] left, int[] right) {
+        int[] mix = new int[left.length + right.length];
+        int i = 0, j = 0, k = 0;
 
-            if (arr[mid] > arr[mid + 1]) {
-                end = mid;
+        while (i < left.length && j < right.length) {
+            if (left[i] < right[j]) {
+                mix[k] = left[i];
+                i++;
             } else {
-                start = mid + 1;
+                mix[k] = right[j];
+                j++;
             }
+            k++;
         }
-        return start;
+        while (i < left.length) {
+            mix[k] = left[i];
+            i++;
+            k++;
+        }
+
+        while (j < right.length) {
+            mix[k] = right[j];
+            j++;
+            k++;
+        }
+        return mix;
     }
+
 }
