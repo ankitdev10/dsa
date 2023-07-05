@@ -2,7 +2,7 @@ package dsajava.revision;
 
 import java.util.Arrays;
 
-public class Revision {
+public class MergeSort {
     public static void main(String[] args) {
         int[] nums = { 8, 7, 6, 5, 4, 0, };
         System.out.println(Arrays.toString(mergeSort(nums)));
