@@ -168,9 +168,18 @@ public class LL {
         return result;
     }
 
-    static void reverse(Node head) {
+    static void reverseIterative(LL ll) {
+        Node head = ll.head;
+        Node curr = head, next = head, prev = null;
 
-        return;
+        while (curr != null) {
+            next = curr.next;
+            // prev = curr;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
     }
 
     void printItems() {

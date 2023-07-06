@@ -99,6 +99,28 @@ public class Leetcode {
     // return r;
     // }
 
+    // ! 206. Reverse Linked List
+    // public ListNode reverseList(ListNode head) {
+    // if(head == null) return null;
+
+    // ListNode curr = head;
+    // ListNode prev = null;
+    // while(curr != null){
+    // // next node tracking
+    // ListNode nextNode = curr.next;
+
+    // // aaba aile ko current bhaneko head ho ani reverse huda head le null point
+    // cause and prev is null for first iteration
+    // curr.next = prev;
+
+    // // aaba prev bhaneko current hunxa
+    // prev = curr;
+
+    // // current node bhaneko aile ko next node
+    // curr = nextNode;
+    // }
+    // return prev;
+    // }
     // ! 234. Palindrome Linked List
     // public boolean isPalindrome(ListNode head) {
     // ListNode curr = head;
@@ -213,5 +235,44 @@ public class Leetcode {
     // slow = slow.next;
     // }
     // return slow;
+    // }
+
+    // public boolean isPalindrome(ListNode head) {
+    // // fast and slow pointers
+
+    // // jaba fast ko node last ma pugxa taba slow middle ma pugxa, cause slow is
+    // half
+    // // the speed of the fast
+
+    // ListNode fast = head, mid = head;
+
+    // while (fast != null && fast.next != null) {
+    // fast = fast.next.next;
+    // mid = mid.next;
+    // }
+
+    // // now reverse the nodes from mid
+    // ListNode curr = mid, next = mid, prev = null;
+    // while (curr != null) {
+    // next = curr.next;
+    // curr.next = prev;
+    // prev = curr;
+    // curr = next;
+    // mid = prev; // this is done to preserve mid as it is the first node of our reversed list
+    // }
+
+    // // now we have two part one starts from head another from mid, compare
+    // elements
+    // // traverse from head and comapre value to mid
+    // curr = head;
+
+    // while (mid != null) {
+    // if (curr.val != mid.val) {
+    // return false;
+    // }
+    // curr = curr.next;
+    // mid = mid.next;
+    // }
+    // return true;
     // }
 }
