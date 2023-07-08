@@ -1,4 +1,4 @@
-package dsajava.leetcodejava;
+package dsajava.leetcodejava.linkedlist;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -258,7 +258,8 @@ public class Leetcode {
     // curr.next = prev;
     // prev = curr;
     // curr = next;
-    // mid = prev; // this is done to preserve mid as it is the first node of our reversed list
+    // mid = prev; // this is done to preserve mid as it is the first node of our
+    // reversed list
     // }
 
     // // now we have two part one starts from head another from mid, compare
