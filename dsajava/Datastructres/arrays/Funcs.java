@@ -1,6 +1,7 @@
 package dsajava.Datastructres.arrays;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -77,5 +78,48 @@ public class Funcs {
             }
         }
         System.out.println(ans);
+    }
+
+    // ! longest subarray with sum k
+
+    // sliding window pattern
+
+    void longestSubarrayWithSumK(int[] a, int k) {
+        // ! bruteforce way
+        // int length = 0;
+        // for (int i = 0; i < a.length; i++) {
+        // int s = 0;
+        // for (int j = i; j < a.length; j++) {
+        // s += a[j];
+
+        // if (s == k) {
+        // length = Math.max(length, j - i + 1);
+        // }
+        // }
+        // }
+        // System.out.println(length);
+
+        // ! hashing
+        int sum = 0;
+        int maxLen = 0;
+
+        HashMap<Integer, Integer> sumMap = new HashMap<>();
+
+        for (int i = 0; i < a.length; i++) {
+            sum += a[i];
+
+            if (sum == k) {
+                maxLen = Math.max(maxLen, i + 1);
+            }
+
+            int rem = sum - k;
+
+            if (sumMap.containsKey(rem)) {
+                maxLen = Math.max(maxLen, i - sumMap.get(rem));
+            } else {
+                sumMap.put(sum, i);
+            }
+        }
+        System.out.println(maxLen);
     }
 }
