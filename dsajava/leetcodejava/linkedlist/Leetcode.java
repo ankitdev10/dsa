@@ -237,6 +237,8 @@ public class Leetcode {
     // return slow;
     // }
 
+    // ! palindrom linked list
+
     // public boolean isPalindrome(ListNode head) {
     // // fast and slow pointers
 

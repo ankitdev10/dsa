@@ -174,7 +174,6 @@ public class LL {
 
         while (curr != null) {
             next = curr.next;
-            // prev = curr;
             curr.next = prev;
             prev = curr;
             curr = next;
