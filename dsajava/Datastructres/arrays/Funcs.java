@@ -1,6 +1,7 @@
 package dsajava.Datastructres.arrays;
 
 import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,6 +9,15 @@ import java.util.Set;
 // ? STRIVER SDE SHEET
 public class Funcs {
     // left rotate array by 1 position
+
+    // helper method for other questions
+    void swap(int[] arr, int swap1, int swap2) {
+        int temp = arr[swap1];
+        arr[swap1] = arr[swap2];
+        arr[swap2] = temp;
+
+    }
+
     void rotateArr(int[] arr, int k) {
         int temp = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -122,4 +132,76 @@ public class Funcs {
         }
         System.out.println(maxLen);
     }
+
+    // ! Leetcode 75. Sort colors
+    void sortZerosOnesTwos(int[] nums) {
+        // ?the brute force solution will be to apply anu of the sorting techniques
+
+        // ! better soltion
+        // ? suru ma 1s, 0s, 2s kati ota xa bhanera count garam ani jati ota xa teti ota
+        // rakhdai jam
+        // int zeros = 0, ones = 0, twos = 0;
+        // for (int i = 0; i < arr.length; i++) {
+        // if (arr[i] == 0)
+        // zeros++;
+        // else if (arr[i] == 1)
+        // ones++;
+        // else if (arr[i] == 2)
+        // twos++;
+        // }
+        // System.out.println(zeros + " " + ones + " " + twos);
+        // // jati ota ones xa teti samma index ma one haldim
+
+        // // first ma chai zero jati ota xa, array ko aagadi aauxa
+        // for (int i = 0; i < zeros; i++) {
+        // arr[i] = 0;
+
+        // }
+
+        // // abaa 1s ones jata sakyo tya bata suru hunxa, yedi zero 3 ta thyo bhani,
+        // zeros
+        // // ko value 3 hunxa, array ko 0,1,2 index ma '0' hunxa ani aaba 1 suru hunxa
+        // for (int i = zeros; i < zeros + ones; i++) {
+        // arr[i] = 1;
+        // }
+
+        // for (int i = ones + zeros; i < arr.length; i++) {
+        // arr[i] = 2;
+        // }
+        // System.out.println(Arrays.toString(arr));
+
+        // ! better solution
+
+        // ! DUTCH NATIONAL FLAG ALGORITHMS
+        // we use 3 pointers, low, mid and high
+        // array is divided into 4 parts, (0, low - 1),(low, mid - 1), (mid, high),
+        // (high + 1, length of array - 1)
+
+        // the first part hypothetically belongs to 0s, second belongs to 1s, 3rd is
+        // UNKNOWN and the last part is for 2s
+
+        // yedi unknown part ma 0 aauxa bhane arr[low], arr[mid] swap, low++, mid++
+
+        // yedi unknown part ma 1 aauxa bhani mid ++
+
+        // yedi two aauxa bhani arr[mid] arr[high] swap ani high --
+
+        int low = 0, mid = 0, high = nums.length - 1;
+
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                // swap low and mid
+                swap(nums, low, mid);
+                low++;
+                mid++;
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else if (nums[mid] == 2) {
+                swap(nums, mid, high);
+                high--;
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+    }
+
 }
