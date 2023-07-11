@@ -4,6 +4,7 @@ import java.util.Arrays;
 // import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 // ? STRIVER SDE SHEET
@@ -204,4 +205,22 @@ public class Funcs {
         System.out.println(Arrays.toString(nums));
     }
 
+    // ! majority element in an array such that the occurence of element is more
+    // than half of length of array
+    public int majorityElement(int[] v) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < v.length; i++) {
+            int value = map.getOrDefault(v[i], 0);
+            map.put(v[i], value + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > v.length / 2) {
+                return entry.getKey();
+            }
+
+        }
+        return 1;
+    }
 }
