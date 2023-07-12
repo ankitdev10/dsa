@@ -207,6 +207,8 @@ public class Funcs {
 
     // ! majority element in an array such that the occurence of element is more
     // than half of length of array
+
+    // NAIVE APPROACH
     public int majorityElement(int[] v) {
         Map<Integer, Integer> map = new HashMap<>();
 
