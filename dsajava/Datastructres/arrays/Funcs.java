@@ -225,4 +225,22 @@ public class Funcs {
         }
         return 1;
     }
+
+    public void DNF(int[] arr) {
+        int low = 0, mid = 0, high = arr.length - 1;
+
+        while (mid <= high) {
+            if (arr[mid] == 0) {
+                swap(arr, mid, low);
+                low++;
+                mid++;
+            } else if (arr[mid] == 1) {
+                mid++;
+            } else {
+                swap(arr, mid, high);
+                high--;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 }

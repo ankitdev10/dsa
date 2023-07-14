@@ -2,9 +2,9 @@ package dsajava.Datastructres.arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 2, 2, 1, 3, 1, 1, 3, 1, 1 };
+        int[] arr = { 1, 1, 2, 2, 0, 1, 2, 0, 0 };
         Funcs func = new Funcs();
-        System.out.println(func.majorityElement(arr));
+        func.DNF(arr);
     }
 
 }
