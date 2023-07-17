@@ -243,4 +243,80 @@ public class Funcs {
         }
         System.out.println(Arrays.toString(arr));
     }
+
+    // ! Find the sub array of size 'k' with largest sum
+    // { 2, 9, 31, -4, 21, 7 };
+    public void slidingWindow(int[] arr, int k) {
+        // ? NAIVE APPRAOCH
+        // int currSum = 0;
+        // int maxSum = -100;
+        // for (int i = 0; i < arr.length; i++) {
+        // currSum = 0;
+        // for (int j = i; j < i + k; j++) {
+        // if (j == arr.length)
+        // break;
+        // currSum += arr[j];
+
+        // }
+        // maxSum = Math.max(maxSum, currSum);
+        // }
+        // System.out.println(maxSum);
+
+        // ! Better approach
+
+        int windowSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        // first sliding window sum
+        for (int i = 0; i < k; i++) {
+            windowSum += arr[i];
+        }
+        // lets find maximum
+        for (int i = k; i < arr.length; i++) {
+            windowSum = windowSum - arr[i - k] + arr[i];
+            maxSum = Math.max(maxSum, windowSum);
+        }
+        System.out.println(maxSum);
+    }
+
+    // ! 53. Maximum Subarray
+    public int maxSubArray(int[] nums) {
+        // ? brute force solution
+        // int sum = -1000;
+        // for (int i = 0; i < nums.length; i++) {
+        // int loopSum = 0;
+        // for (int j = i; j < nums.length; j++) {
+        // loopSum += nums[j];
+        // sum = Math.max(loopSum, sum);
+        // }
+        // }
+        // System.out.println(sum);
+        // return sum;
+
+        // ! KADANE'S ALGORITHM
+        // first take a big negative number as a maximum value
+        // loop through the array
+        // get sum in increasing order(0th index, 0 - 1st index, 0 to 3rd index and so
+        // on)
+        // find max from current max and loop-sum
+        // if the loop-sum resolves to a positive number carry sum to next interation
+        // else
+        // replace it with 0
+
+        int max = Integer.MIN_VALUE;
+        int loopSum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            loopSum += nums[i];
+            max = Math.max(max, loopSum);
+            if (loopSum < 0) {
+                loopSum = 0;
+            }
+
+        }
+        System.out.println(max);
+        return max;
+
+    }
+
 }
