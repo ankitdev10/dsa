@@ -1,13 +1,16 @@
 
 class Misc {
     public static void main(String[] args) {
-        printNatural(5);
+        for (int i = 0; i < 100; i++) {
+
+            if (i % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+            System.out.println(
+                    "hehe");
+        }
     }
 
-    static void printNatural(int n) {
-        if (n == 0)
-            return;
-        printNatural(n - 1);
-        System.out.println(n);
-    }
 }

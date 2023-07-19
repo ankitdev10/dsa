@@ -345,4 +345,44 @@ public class Funcs {
 
         return largestProduct;
     }
+
+    // ! 121. Best Time to Buy and Sell Stock
+
+    public int maxProfit(int[] prices) {
+        // two pointers
+        // left to buy stock
+        // / right is to sell which is left + 1, because we can only sell after we buy
+
+        int left = 0;
+        int right = 1;
+        int profit = 0;
+
+        while (right < prices.length) {
+            if (prices[left] < prices[right]) {
+                int currProfit = prices[right] - prices[left];
+                profit = Math.max(currProfit, profit);
+            } else {
+                left = right;
+            }
+            right++;
+        }
+        return profit;
+    }
+
+    // ! 2149 rearrange array elements by sign
+    public int[] rearrangeArray(int[] nums) {
+        int pos = 0; // index for positive nums
+        int neg = 1; // index for negs
+        int[] ans = new int[nums.length];
+        for (int el : nums) {
+            if (el > 0) {
+                ans[pos] = el;
+                pos += 2;
+            } else {
+                ans[neg] = el;
+                neg += 2;
+            }
+        }
+        return ans;
+    }
 }
