@@ -385,4 +385,42 @@ public class Funcs {
         }
         return ans;
     }
+
+    // PRINT ALL THE ELEMENTS THAT ARE LEADERS(tyo element ko right ma tyo bhanda
+    // sano matra hunu paryos)
+
+    void findLeader(int[] arr) {
+
+        // brute force
+        // for (int i = 0; i < arr.length; i++) {
+        // boolean leader = true;
+        // for (int j = i + 1; j < arr.length; j++) {
+        // if (arr[j] > arr[i]) {
+        // leader = false;
+        // break;
+        // }
+        // }
+        // if (leader == true) {
+        // System.out.println(arr[i]);
+        // }
+        // }
+
+        // OPTIMAL
+
+        // last bata herdam aam,ani current element ko right ko greatest matra track
+        // garam
+        // yedi current element right ko greatest bhanda thulo xa bhani, that is a
+        // leader ani naya max pani tei element hunxa
+
+        int max = Integer.MIN_VALUE;
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] > max) {
+                System.out.println(arr[i]);
+            }
+            max = Math.max(arr[i], max);
+
+        }
+    }
+
 }
