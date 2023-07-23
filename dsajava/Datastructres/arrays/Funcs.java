@@ -423,4 +423,34 @@ public class Funcs {
         }
     }
 
+    // ! 128. Longest Consecutive Sequence (find longest consective chain of
+    // numbers)
+
+    // ! Input: nums = [100,4,200,1,3,2]
+    // ! Output: 4
+    // ! Explanation: The longest consecutive elements sequence is [1, 2, 3, 4].
+    // ! Therefore its length is 4.
+    public int longestConsecutive(int[] nums) {
+
+        // ? BRUUTE FORCE
+
+        // paila euta element lim lets say x, ani x + 1, x + 2, x + 3 khojdai jam, ani
+        // tei anusar length find garam ani tyo lenght ra aile samma ko max compare
+        // garam
+
+        int maxLength = 1;
+
+        for (int i = 0; i < nums.length; i++) {
+            int sequenceLen = 1;
+            for (int j = 0; j < nums.length; j++) {
+
+                if (nums[j] == nums[i] + j) {
+                    System.out.println(nums[j]);
+                }
+            }
+        }
+
+        return maxLength;
+
+    }
 }
