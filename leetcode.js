@@ -83,22 +83,22 @@
 
 // ! FIBONACCI WITHOUT RECURSION
 
-// function fib(n) {
-//   if (n == 1) return 0;
-//   if (n < 3) return 1;
+function fib(n) {
+  if (n == 1) return 0;
+  if (n < 3) return 1;
 
-//   let first = 0;
-//   let second = 1;
-//   let third = 0;
-//   for (let i = 0; i < n - 1; i++) {
-//     third = first + second;
-//     first = second;
-//     second = third;
-//   }
-//   return third;
-// }
+  let first = 0;
+  let second = 1;
+  let third = 0;
+  for (let i = 0; i < n - 1; i++) {
+    third = first + second;
+    first = second;
+    second = third;
+  }
+  return third;
+}
 
-// console.log(fib(35));
+console.log(fib(35));
 
 // ! 347. Top K Frequent Elements
 
